@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #ff7f27;
+    font-family: "Segoe UI", "Hiragino Sans", "Meiryo", sans-serif;
+    overflow: hidden;
+}
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.main-container {
+    background-color: #ff7f27;
+    padding: 20px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.title {
+    background-color: #000000;
+    border-radius: 20px;
+    width: 72%;
+    height: 56px;
+    align-self: center;
+    flex-shrink: 0;
+}
+
+.bottom-row {
+    display: flex;
+    gap: 16px;
+    flex: 1;
+    min-height: 0;
+}
+
+.seiseki {
+    background-color: #000000;
+    border-radius: 20px;
+    flex: 7;
+}
+
+.chat {
+    background-color: #000000;
+    border-radius: 20px;
+    flex: 3;
+}
