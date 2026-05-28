@@ -31,8 +31,17 @@ body {
     border-radius: 20px;
     width: 72%;
     height: 56px;
-    align-self: center;
     flex-shrink: 0;
+}
+
+.top-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.top-header .title {
+    flex: 1;
 }
 
 .bottom-row {
@@ -105,7 +114,6 @@ body {
 
 .title-row {
     display: flex;
-    gap: 10px;
     align-items: stretch;
     min-height: 44%;
 }
@@ -121,21 +129,38 @@ body {
     cursor: pointer;
 }
 
+.top-toggle {
+    width: 68px;
+    height: 56px;
+    flex-shrink: 0;
+}
+
 .side-menu {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     bottom: 0;
+    height: 100vh;
     width: min(340px, 62%);
-    padding: 16px 10px 16px 16px;
+    padding: 20px 10px 16px 16px;
     background-color: rgba(0, 0, 0, 0.92);
     transform: translateX(-105%);
     transition: transform 0.35s ease;
-    z-index: 2;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 }
 
-.seiseki.sidebar-open .side-menu {
+body.sidebar-open .side-menu {
     transform: translateX(0);
+}
+
+.sidebar-close {
+    width: 56px;
+    height: 56px;
+    font-size: 42px;
+    align-self: flex-end;
 }
 
 .sidebar-auto-links {

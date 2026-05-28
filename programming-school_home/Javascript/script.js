@@ -5,12 +5,12 @@ const rankPhotoMap = {
 };
 
 function setupSidebar() {
-    const seiseki = document.querySelector(".seiseki");
+    const body = document.body;
     const toggleButton = document.querySelector("#sidebar-toggle");
-    const sideMenu = document.querySelector("#side-menu");
+    const closeButton = document.querySelector("#sidebar-close");
     const autoLinkArea = document.querySelector(".sidebar-auto-links");
 
-    if (!seiseki || !toggleButton || !sideMenu || !autoLinkArea) {
+    if (!body || !toggleButton || !closeButton || !autoLinkArea) {
         return;
     }
 
@@ -28,9 +28,18 @@ function setupSidebar() {
     });
     observer.observe(autoLinkArea, { childList: true, subtree: true });
 
-    toggleButton.addEventListener("click", () => {
-        const isOpen = seiseki.classList.toggle("sidebar-open");
+    const setSidebarOpen = (isOpen) => {
+        body.classList.toggle("sidebar-open", isOpen);
         toggleButton.setAttribute("aria-expanded", String(isOpen));
+    };
+
+    toggleButton.addEventListener("click", () => {
+        const isOpen = !body.classList.contains("sidebar-open");
+        setSidebarOpen(isOpen);
+    });
+
+    closeButton.addEventListener("click", () => {
+        setSidebarOpen(false);
     });
 }
 
