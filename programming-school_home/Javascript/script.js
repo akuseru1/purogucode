@@ -1,7 +1,7 @@
 // ランク文字に応じて右下の写真を切り替える
 const rankPhotoMap = {
-    A: "../A.jpg",
-    B: "../B.jpg",
+    A: "img/A.jpg",
+    B: "img/B.jpg",
 };
 
 function setupSidebar() {

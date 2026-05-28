@@ -1,0 +1,66 @@
+body {
+margin: 0;
+padding: 0;
+background-color: white;
+overflow: hidden;
+}
+
+/* 1. 左上のブロック（黒に変更） */
+.sidebar-black {
+position: fixed;
+top: 0;
+left: 0;
+width: 25%;
+height: 66.7vh;
+background-color: black;
+/* 右側に白い境界線 */
+border-right: 2px solid rgb(255, 255, 255);
+box-sizing: border-box;
+}
+
+/* 2. 右上の白いエリア */
+.main-white {
+position: fixed;
+top: 0;
+left: 25%;
+width: 75%;
+height: calc(66.7vh * (5/6));
+background-color: rgb(194, 194, 194);
+padding: 20px;
+box-sizing: border-box;
+}
+
+/* 3. ボタンエリア（上側に白い境界線） */
+.button-bar {
+position: fixed;
+top: calc(66.7vh * (5/6));
+left: 25%;
+width: 75%;
+height: calc(66.7vh * (1/6));
+background-color: #5e5e5e;
+display: flex;
+align-items: center;
+padding: 0 20px;
+/* 上側に白い境界線（背景が白に近い場合は少し影をつけるか、背景色で差を出す） */
+border-top: 2px solid white;
+box-sizing: border-box;
+}
+
+/* 4. 下部の黒い入力エリア（上側に白い境界線） */
+.bottom-input {
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 33.3vh;
+background-color: black;
+color: rgb(89, 255, 0);
+font-size: 1.2rem;
+padding: 20px;
+border: none;
+/* 上側に目立つ白い境界線 */
+border-top: 2px solid white;
+outline: none;
+box-sizing: border-box;
+resize: none;
+}
